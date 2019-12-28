@@ -21,3 +21,10 @@ if(validator.validateEmail(email)){
 }else{
 	console.log("invalid email");
 }
+
+let mobileNumber=read.question("Enter the Mobile Number :");
+if(validator.validateMobileNumber(mobileNumber)){
+	console.log("valid mobile number");
+}else{
+	console.log("invalid mobile number");
+}
