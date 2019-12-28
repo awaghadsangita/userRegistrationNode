@@ -17,7 +17,8 @@ class Validator{
 	validatePassword(pwd){
 		let passwordRegex=RegExp("^[a-zA-Z0-9]{8}");
 		let uppercaseRegex=RegExp("[A-Z]");
-		return passwordRegex.test(pwd) && uppercaseRegex.test(pwd);
+		let digitRegex=RegExp("[0-9]");
+		return passwordRegex.test(pwd) && uppercaseRegex.test(pwd) && digitRegex.test(pwd);
 	}
 }
 module.exports=new Validator();
