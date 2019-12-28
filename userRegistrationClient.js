@@ -28,3 +28,10 @@ if(validator.validateMobileNumber(mobileNumber)){
 }else{
 	console.log("invalid mobile number");
 }
+
+let password=read.question("Enter the Password :");
+if(validator.validatePassword(password)){
+	console.log("valid password");
+}else{
+	console.log("invalid password");
+}
