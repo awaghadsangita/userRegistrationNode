@@ -13,5 +13,10 @@ class Validator{
 		let mobileRegex=RegExp("^[0-9]{2}[ ]{1}[0-9]{10}$");
 		return mobileRegex.test(mobileNumber);
 	}
+	
+	validatePassword(pwd){
+		let passwordRegex=RegExp("^[a-zA-Z0-9]{8}");
+		return passwordRegex.test(pwd);
+	}
 }
 module.exports=new Validator();
