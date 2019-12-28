@@ -8,3 +8,9 @@ if(validator.validateName(firstname)){
 	console.log("invalid first name");
 }
 
+let lastname=read.question("Enter the Lastname");
+if(validator.validateName(lastname)){
+	console.log("valid lastname");
+}else{
+	console.log("invalid lastname")
+}
