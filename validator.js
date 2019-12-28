@@ -15,10 +15,16 @@ class Validator{
 	}
 	
 	validatePassword(pwd){
-		let passwordRegex=RegExp("^[a-zA-Z0-9]{8}");
+		let passwordRegex=RegExp("^[a-zA-Z0-9]{8,}");
 		let uppercaseRegex=RegExp("[A-Z]");
 		let digitRegex=RegExp("[0-9]");
-		return passwordRegex.test(pwd) && uppercaseRegex.test(pwd) && digitRegex.test(pwd);
+		let specialCharacter=RegExp("^([a-zA-Z0-9])*[!@#$%^&*()<>-_+]{1}([a-zA-Z0-9])*$");
+
+		if(specialCharacter.test(pwd)){
+			return  passwordRegex.test(pwd) && uppercaseRegex.test(pwd) && digitRegex.test(pwd);
+		}else{
+			return false;
+		}
 	}
 }
 module.exports=new Validator();
