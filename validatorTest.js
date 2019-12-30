@@ -123,4 +123,9 @@ describe('Test for email validity',function(){
 		let isValid=validator.validateEmail("abc@gmail.com.1a");
 		assert.equal(isValid,false);	
 	});
+
+	it('it should return false if email contains multiple tld',function(){
+		let isValid=validator.validateEmail("abc@gmail.com.aa.au");
+		assert.equal(isValid,false);
+	});
 });
