@@ -156,3 +156,11 @@ describe("Test for Password Validity",function(){
 		assert.equal(isValid,true);
 	});
 });
+
+describe("Test for Mobile Number Validity",function(){
+	it('it should return false if mobile number contains letter',function(){
+		let isValid=validator.validateMobileNumber("A9 9422329006");
+		assert.equal(isValid,false);
+	});
+
+});
