@@ -136,4 +136,8 @@ describe("Test for Password Validity",function(){
 		assert.equal(isValid,false);
 	});
 	
+	it('it should return false if password does not contains atleast one uppercase',function(){
+		let isValid=validator.validatePassword("sangita123!");
+		assert.equal(isValid,false);
+	});	
 });
