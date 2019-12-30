@@ -132,7 +132,7 @@ describe('Test for email validity',function(){
 
 describe("Test for Password Validity",function(){
 	it('it should return false if password contains less than 8 characters',function(){
-		let isValid=validator.validatePassword("Sang");
+		let isValid=validator.validatePassword("Suraj");
 		assert.equal(isValid,false);
 	});
 	
@@ -140,4 +140,9 @@ describe("Test for Password Validity",function(){
 		let isValid=validator.validatePassword("sangita123!");
 		assert.equal(isValid,false);
 	});	
+
+	it('it should return false if password does not contain atleast one digit',function(){
+		let isValid=validator.validatePassword("Sangita!");
+		assert.equal(isValid,false);
+	});
 });
