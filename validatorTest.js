@@ -88,4 +88,9 @@ describe('Test for email validity',function(){
 		let isValid=validator.validateEmail("abc@.com.my");
 		assert.equal(isValid,false);
 	});
+
+	it('it should return false if tld start with dot “.”',function(){
+		let isValid=validator.validateEmail("abc123@.com.com");
+		assert.equal(isValid,false);
+	});
 });
