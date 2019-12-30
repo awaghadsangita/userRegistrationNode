@@ -108,4 +108,10 @@ describe('Test for email validity',function(){
 		let isValid=validator.validateEmail("abc..2002@gmail.com");
 		assert.equal(isValid,false);
 	});
+	
+	it('it should return false if email ends with "."',function(){
+		let isValid=validator.validateEmail("abc.@gmail.com");
+		assert.equal(isValid,false);
+	});
+	
 });
