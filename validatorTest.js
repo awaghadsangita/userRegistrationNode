@@ -162,5 +162,9 @@ describe("Test for Mobile Number Validity",function(){
 		let isValid=validator.validateMobileNumber("A9 9422329006");
 		assert.equal(isValid,false);
 	});
-
+	
+	it("it should return false if mobile number's country code not given",function(){
+		let isValid=validator.validateMobileNumber("9422329007");
+		assert.equal(isValid,false);
+	});
 });
