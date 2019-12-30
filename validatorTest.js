@@ -78,5 +78,8 @@ describe('Test for email validity',function(){
 		let isValid=validator.validateEmail('abc+100@gmail.com');
 		assert.equal(isValid,true);
 	});
-
+	
+	it('it should return false if mail does not contains “@” symbol',function(){
+		let isValid=validator.validateEmail("abc");
+	});
 });
