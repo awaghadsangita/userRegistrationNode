@@ -150,4 +150,9 @@ describe("Test for Password Validity",function(){
 		let isValid=validator.validatePassword("Sangita123!!!");
 		assert.equal(isValid,false);
 	});
+
+	it('it should return true if password is valid',function(){
+		let isValid=validator.validatePassword("Sangita123!");
+		assert.equal(isValid,true);
+	});
 });
