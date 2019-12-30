@@ -7,4 +7,9 @@ describe('Test for username validity',function(){
 		assert.equal(isValid,true);
 	});
 	
+	it('it should return false if name does not uppercase',function(){
+		var isValid=validator.validateName('sangita');
+		assert.equal(isValid,false);
+	});
+
 });
