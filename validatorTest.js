@@ -98,4 +98,10 @@ describe('Test for email validity',function(){
 		let isValid=validator.validateEmail(".abc@abc.com");
 		assert.equal(isValid,false);
 	});
+
+	it('it should return false as email’s is only allow character, digit, underscore and dash',function(){
+		let isValid=validator.validateEmail("abc()*@gmail.com");
+		assert.equal(isValid,false);
+	});
+	
 });
