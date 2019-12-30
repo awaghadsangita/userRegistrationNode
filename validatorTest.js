@@ -104,4 +104,8 @@ describe('Test for email validity',function(){
 		assert.equal(isValid,false);
 	});
 	
+	it('it should return false if email contains double dots “.”',function(){
+		let isValid=validator.validateEmail("abc..2002@gmail.com");
+		assert.equal(isValid,false);
+	});
 });
