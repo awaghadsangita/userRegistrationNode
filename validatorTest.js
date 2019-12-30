@@ -3,27 +3,27 @@ var validator=require('./validator');
 
 describe('Test for username validity',function(){
 	it('it should return true if valid firstname',function(){
-		var isValid=validator.validateName('Sangita');
+		let isValid=validator.validateName('Sangita');
 		assert.equal(isValid,true);
 	});
 	
 	it('it should return false if name does not uppercase',function(){
-		var isValid=validator.validateName('sangita');
+		let isValid=validator.validateName('sangita');
 		assert.equal(isValid,false);
 	});
 	
 	it('it should return false if name does not contain minimum 3 letters',function(){
-		var isValid=validator.validateName('Sa');
+		let isValid=validator.validateName('Sa');
 		assert.equal(isValid,false);
 	});
 	
 	it('it should return false if name is undefined',function(){
-		var isValid=validator.validateName(undefined);
+		let isValid=validator.validateName(undefined);
 		assert.equal(isValid,false);
 	});
 	
 	it('it should return false if name is null',function(){
-		var isValid=validator.validateName(null);
+		let isValid=validator.validateName(null);
 		assert.equal(isValid,false);
 	});
 });
