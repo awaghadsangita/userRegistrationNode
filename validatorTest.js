@@ -177,4 +177,9 @@ describe("Test for Mobile Number Validity",function(){
 		let isValid=validator.validateMobileNumber("9 9422329006");
 		assert.equal(isValid,false);
 	});
+
+	it("it should return true if mobile number is valid",function(){
+		let isValid=validator.validateMobileNumber("91 9422329006");
+		assert.equal(isValid,true);
+	});
 });
