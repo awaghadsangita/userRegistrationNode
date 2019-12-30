@@ -93,4 +93,9 @@ describe('Test for email validity',function(){
 		let isValid=validator.validateEmail("abc123@.com.com");
 		assert.equal(isValid,false);
 	});
+
+	it('it should return false if email’s 1st character start with “.”',function(){
+		let isValid=validator.validateEmail(".abc@abc.com");
+		assert.equal(isValid,false);
+	});
 });
