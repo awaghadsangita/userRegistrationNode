@@ -81,5 +81,11 @@ describe('Test for email validity',function(){
 	
 	it('it should return false if mail does not contains “@” symbol',function(){
 		let isValid=validator.validateEmail("abc");
+		assert.equal(isValid,false);
+	});
+
+	it('it should return false if tld start with dot “.”',function(){
+		let isValid=validator.validateEmail("abc@.com.my");
+		assert.equal(isValid,false);
 	});
 });
