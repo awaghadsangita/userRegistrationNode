@@ -145,4 +145,9 @@ describe("Test for Password Validity",function(){
 		let isValid=validator.validatePassword("Sangita!");
 		assert.equal(isValid,false);
 	});
+
+	it('it should return false if password contains multiple special characters',function(){
+		let isValid=validator.validatePassword("Sangita123!!!");
+		assert.equal(isValid,false);
+	});
 });
