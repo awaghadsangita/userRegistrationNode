@@ -21,4 +21,9 @@ describe('Test for username validity',function(){
 		var isValid=validator.validateName(undefined);
 		assert.equal(isValid,false);
 	});
+	
+	it('it should return false if name is null',function(){
+		var isValid=validator.validateName(null);
+		assert.equal(isValid,false);
+	});
 });
