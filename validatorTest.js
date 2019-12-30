@@ -172,4 +172,9 @@ describe("Test for Mobile Number Validity",function(){
 		let isValid=validator.validateMobileNumber("91 94223290071");
 		assert.equal(isValid,false);
 	});
+	
+	it("it should return false if country code does not contain exactly two digit",function(){
+		let isValid=validator.validateMobileNumber("9 9422329006");
+		assert.equal(isValid,false);
+	});
 });
