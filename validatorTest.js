@@ -167,4 +167,9 @@ describe("Test for Mobile Number Validity",function(){
 		let isValid=validator.validateMobileNumber("9422329007");
 		assert.equal(isValid,false);
 	});
+
+	it("it should return false if mobile number does not contains exactly 10 digit",function(){
+		let isValid=validator.validateMobileNumber("91 94223290071");
+		assert.equal(isValid,false);
+	});
 });
