@@ -118,4 +118,9 @@ describe('Test for email validity',function(){
 		let isValid=validator.validateEmail("abc@abc@gmail.com");
 		assert.equal(isValid,false);
 	});	
+	
+	it('it should return false if email’s tld which has two characters contains digit',function(){
+		let isValid=validator.validateEmail("abc@gmail.com.1a");
+		assert.equal(isValid,false);	
+	});
 });
