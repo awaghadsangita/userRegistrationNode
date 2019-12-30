@@ -11,5 +11,9 @@ describe('Test for username validity',function(){
 		var isValid=validator.validateName('sangita');
 		assert.equal(isValid,false);
 	});
-
+	
+	it('it should return false if name does not contain minimum 3 letters',function(){
+		var isValid=validator.validateName('Sa');
+		assert.equal(isValid,false);
+	})
 });
